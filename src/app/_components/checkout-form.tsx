@@ -312,7 +312,7 @@ export function CheckoutForm({ product }: CheckoutFormProps) {
                                         <div className="relative flex items-center space-x-4 p-6 rounded-lg bg-green-50 border-2 border-green-200">
                                             <RadioGroupItem value="pix" id="pix" className="border-green-600 text-green-600" />
                                             <Label htmlFor="pix" className="flex-1 cursor-pointer">
-                                                <div className="flex items-center justify-between">
+                                                <div className="flex items-center justify-between gap-2">
                                                     <div className="flex items-center gap-4">
                                                         <QrCode className="w-6 h-6 text-green-600" />
                                                         <div>
@@ -325,7 +325,6 @@ export function CheckoutForm({ product }: CheckoutFormProps) {
                                                             <Zap className="w-3 h-3 mr-1" />
                                                             TAXA 0%
                                                         </Badge>
-                                                        <p className="text-green-700 text-xs font-medium">Economize {formatCurrency(calculations.savings)}</p>
                                                     </div>
                                                 </div>
                                             </Label>
