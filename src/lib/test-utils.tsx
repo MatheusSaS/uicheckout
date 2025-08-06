@@ -30,7 +30,4 @@ export const mockProduct: Product = {
     "Planilha de ROI Automática", 
     "Acesso ao Grupo VIP no Telegram"
   ],
-}
-
-export const waitForLoadingToFinish = () => 
-  new Promise(resolve => setTimeout(resolve, 0))
+} 

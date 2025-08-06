@@ -23,9 +23,8 @@ Acesse [http://localhost:3000](http://localhost:3000) para visualizar a aplicaç
 ## Testes
 
 ```bash
-npm test              # Executa todos os testes
-npm run test:watch    # Executa testes em modo watch
-npm run test:coverage # Executa testes com relatório de cobertura
+npm test
+npm run test:watch
 ```
 
 ## Funcionalidades Implementadas

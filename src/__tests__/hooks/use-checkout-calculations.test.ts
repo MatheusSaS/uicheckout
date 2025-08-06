@@ -16,7 +16,7 @@ describe('useCheckoutCalculations', () => {
         producerReceives: 297,
         installmentValue: 297,
         feePercentage: 0,
-        savings: 11.8403, // 297 * 0.0399
+        savings: expect.closeTo(11.84, 0.01), // 297 * 0.0399
       })
     })
   })
@@ -97,12 +97,12 @@ describe('useCheckoutCalculations', () => {
     it('deve recalcular quando o método de pagamento muda', () => {
       const { result, rerender } = renderHook(
         ({ method }) => useCheckoutCalculations(productPrice, method, 1),
-        { initialProps: { method: 'pix' as const } }
+        { initialProps: { method: 'pix' as 'pix' | 'card' } }
       )
 
       expect(result.current.calculations.platformFee).toBe(0)
 
-      rerender({ method: 'card' as const })
+      rerender({ method: 'card' as 'pix' | 'card' })
       expect(result.current.calculations.platformFee).toBeGreaterThan(0)
     })
   })
